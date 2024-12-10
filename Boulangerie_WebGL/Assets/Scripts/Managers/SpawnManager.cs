@@ -73,6 +73,9 @@ public class SpawnManager : Singleton<SpawnManager>
 
     public void Destroy_Pain(int level, Pain pain)
     {
+        if (!pain.gameObject.activeSelf || pain == null)
+            return;
+
         painList.Remove(pain);
         PoolManager.Instance.TakeToPool<Pain>($"Pain_{level}", pain);
     }

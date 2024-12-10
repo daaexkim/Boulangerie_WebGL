@@ -16,9 +16,9 @@ PlayerSettings:
   productName: Boulangerie_game
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.7568628, g: 0.57254905, b: 0.42352945, a: 1}
   m_ShowUnitySplashScreen: 1
-  m_ShowUnitySplashLogo: 1
+  m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
@@ -39,7 +39,9 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
+  m_SplashScreenLogos:
+  - logo: {fileID: 21300000, guid: 43dde9c7cfd62a54996ac318f8b56840, type: 3}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -155,7 +157,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.DaaeDa.Boulangerie_game
     Lumin: com.DefaultCompany.com.unity.template.mobile2D
-    Standalone: com.DefaultCompany.com.unity.template.mobile2D
+    Standalone: com.DaaeDa.Boulangeriegame
     iPhone: com.DefaultCompany.com.unity.template.mobile2D
     tvOS: com.DefaultCompany.com.unity.template.mobile2D
   buildNumber:
@@ -785,7 +787,7 @@ PlayerSettings:
     Server: UNITY_VISUAL_SCRIPTING
     Stadia: DOTWEEN
     Standalone: DOTWEEN;UNITY_VISUAL_SCRIPTING;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;ODIN_VALIDATOR_3_2;ODIN_VALIDATOR_3_3
-    WebGL: DOTWEEN;UNITY_VISUAL_SCRIPTING
+    WebGL: DOTWEEN;UNITY_VISUAL_SCRIPTING;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;ODIN_VALIDATOR_3_2;ODIN_VALIDATOR_3_3
     Windows Store Apps: DOTWEEN;UNITY_VISUAL_SCRIPTING
     XboxOne: DOTWEEN;UNITY_VISUAL_SCRIPTING
     iPhone: DOTWEEN;UNITY_VISUAL_SCRIPTING

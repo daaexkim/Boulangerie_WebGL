@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using GooglePlayGames;
-using GooglePlayGames.BasicApi;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -26,11 +24,9 @@ public class GameManager : Singleton<GameManager>
     public int curScore, tarScore;
     private int lastScore = 0;
 
-    private void Start()
+    protected override void Awake()
     {
-        #if UNITY_ANDROID
-        GPGSManager.Inst.Login();
-        #endif
+        base.Awake();
 
         Application.targetFrameRate = 60;
         LoadAll();
@@ -70,7 +66,9 @@ public class GameManager : Singleton<GameManager>
     }
     public void GainCoin(int amount)
     {
-        int calAmount = gameMode == GameMode.Bebe ? amount / 2 : amount;
+        int calAmount = amount;
+        if(amount > 0)
+            calAmount = gameMode == GameMode.Bebe ? amount / 2 : amount;
 
         tarCoin += calAmount;
     }
