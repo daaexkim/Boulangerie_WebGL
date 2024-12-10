@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pain
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: cd9e5f2fc3e83c7409f68ed8fce4a1ff, type: 3}
+    - {fileID: 102900000, guid: 0dc0986535cffb444bd308fdc04bf7b4, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8d333250bd2f5fc439f4c0b2232f47f7, type: 3}
+  - {fileID: 21300000, guid: 38f98560533e6c342b52aa86f9f97840, type: 3}
+  - {fileID: 21300000, guid: 500d7270f38622948a28bc4fad3ae83a, type: 3}
+  - {fileID: 21300000, guid: 817e9801263963e438938b1a21bb7656, type: 3}
+  - {fileID: 21300000, guid: fa448d01471cc7d43b74ae1e182906e0, type: 3}
+  - {fileID: 21300000, guid: e61a4a519503aad4387ab9dea1acaf9b, type: 3}
+  - {fileID: 21300000, guid: 81685f5152b87eb40802e5278ea1335c, type: 3}
+  - {fileID: 21300000, guid: 48bd19b159a8cef43bb02f6d89febdfb, type: 3}
+  - {fileID: 21300000, guid: d8b614121bab30142880775d0e548937, type: 3}
+  - {fileID: 21300000, guid: 014c8f123f249ca428a9b4fc687b400d, type: 3}
+  - {fileID: 21300000, guid: f3b724322acdb6f448100c6ba929a3b3, type: 3}
+  - {fileID: 21300000, guid: c2abf07275d7f754a8793735ffcdb219, type: 3}
+  - {fileID: 21300000, guid: 7eb83c03ab7fb4648ab686a762ba91f7, type: 3}
+  - {fileID: 21300000, guid: 703ab583250ff5d429b31f7c480d316d, type: 3}
+  - {fileID: 21300000, guid: d8224e146e4e5ca47a879061dc4bffb8, type: 3}
+  - {fileID: 21300000, guid: 441bd3942c006d8468adc22b5a39010a, type: 3}
+  - {fileID: 21300000, guid: 3be372d4ed78526428c7fe7a7706db47, type: 3}
+  - {fileID: 21300000, guid: 36580c0582eb6f8458ea1c3c806211cc, type: 3}
+  - {fileID: 21300000, guid: 1cc51055e50dc374aa0eed7fd19613d0, type: 3}
+  - {fileID: 21300000, guid: 2473fd75b149ffe4199565e6c49ec349, type: 3}
+  - {fileID: 21300000, guid: 2c69b495b4de8054bb402a73a6de78a0, type: 3}
+  - {fileID: 21300000, guid: a17d94b558e11494daaaa129f609b02f, type: 3}
+  - {fileID: 21300000, guid: e7dc34d5edbcbb9499354f71f1fdf3ec, type: 3}
+  - {fileID: 21300000, guid: 779638f50efb8424381c4305d89fbdc0, type: 3}
+  - {fileID: 21300000, guid: 5322a796bf61a2243812274897aa9523, type: 3}
+  - {fileID: 21300000, guid: 62f43b2715204574b8da5e9d083b803d, type: 3}
+  - {fileID: 21300000, guid: 03731e47ef4f22d498999ee3bae9b3b4, type: 3}
+  - {fileID: 21300000, guid: 623bc477ea0c9714ca33ddaf09bc1cdc, type: 3}
+  - {fileID: 21300000, guid: ef8d81971768a454ca3dfb6832227ea2, type: 3}
+  - {fileID: 21300000, guid: 89d3aed7009292f48837f2759d82e9a5, type: 3}
+  - {fileID: 21300000, guid: d6d83768ead9540499355ea2b0d641e7, type: 3}
+  - {fileID: 21300000, guid: feea09b8c747c384cbfb5deb41eeadd4, type: 3}
+  - {fileID: 21300000, guid: 777e61492a0f70f468ca5286fbf4113a, type: 3}
+  - {fileID: 21300000, guid: eb5799792614a89478387e4993fd9229, type: 3}
+  - {fileID: 21300000, guid: a6caa03ab42f3214798039f1a238bb73, type: 3}
+  - {fileID: 21300000, guid: ab5bcd6afe44d0145b53cefb19943f93, type: 3}
+  - {fileID: 21300000, guid: 7591fa8abe894734fa01d98b674c2522, type: 3}
+  - {fileID: 21300000, guid: e6b2bf0ba2c5db542bce58bcea149c7c, type: 3}
+  - {fileID: 21300000, guid: f4b2cd1b29bf25d409a61fcedea4c83b, type: 3}
+  - {fileID: 21300000, guid: 9fae814b5dcb47a498f4e1fc559ca80f, type: 3}
+  - {fileID: 21300000, guid: 640c0e5bf64d5784082d096acf7cc6a8, type: 3}
+  - {fileID: 21300000, guid: 6d08437b93f9dd74799a9d0d8c136391, type: 3}
+  - {fileID: 21300000, guid: ce2ecfdb556885c4883efcce74abd6da, type: 3}
+  - {fileID: 21300000, guid: 9f6645ebc80440443847e6b71b708f9d, type: 3}
+  - {fileID: 21300000, guid: d65c4bac95a7950409a391124cbe44a8, type: 3}
+  - {fileID: 21300000, guid: cc8ed3dcabf08cc458cfa06fd5ab7532, type: 3}
+  - {fileID: 21300000, guid: b8267c1d11ef46844bcb1d7691d56a46, type: 3}
+  - {fileID: 21300000, guid: b9ed383d091af474a83229bec0cd8016, type: 3}
+  - {fileID: 21300000, guid: ce02456dfbcbcfd4db303d4b984bcacd, type: 3}
+  - {fileID: 21300000, guid: 6d979ecd5e3d0a44180f9e7769e9f10f, type: 3}
+  - {fileID: 21300000, guid: d5cbf81e3f8d2234cbf88fadf7dd8443, type: 3}
+  - {fileID: 21300000, guid: 8d65dc6e7a47faa42a20eb208f61962e, type: 3}
+  - {fileID: 21300000, guid: 41b39f8e9c5f89345bf393f4dc1f8feb, type: 3}
+  - {fileID: 21300000, guid: 20fc8dae9b069f24c96ab893386c8f60, type: 3}
+  - {fileID: 21300000, guid: da62f1fe385b0da46825a5595e4fb88c, type: 3}
+  - {fileID: 21300000, guid: 99e2f37fe4d351945bcbe2e4354af568, type: 3}
+  - {fileID: 21300000, guid: c31ca58f88cef1347ba530aae55a6fd9, type: 3}
+  - {fileID: 21300000, guid: e46c1bcfc80d73747aabad1c2e24782e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Burned_Bited_Pain#4
+  - Pain#10
+  - Bited_Pain#2
+  - Face_5
+  - Bited_Pain#0
+  - Burned_Pain#10
+  - Face_8
+  - Face_13
+  - Bited_Pain#7
+  - Pain#3
+  - Face_4
+  - Bited_Pain#5
+  - Burned_Pain#0
+  - Burned_Pain#3
+  - Pain#6
+  - Pain#5
+  - Burned_Bited_Pain#6
+  - Burned_Bited_Pain#7
+  - Burned_Pain#1
+  - Burned_Pain#6
+  - Face_7
+  - Burned_Bited_Pain#1
+  - Burned_Pain#5
+  - Burned_Pain#8
+  - Face_6
+  - Face_0
+  - Burned_Bited_Pain#2
+  - Face_12
+  - Burned_Bited_Pain#3
+  - Pain#8
+  - Burned_Pain#7
+  - Bited_Pain#4
+  - Face_3
+  - Pain#1
+  - Burned_Pain#4
+  - Burned_Bited_Pain#10
+  - Face_1
+  - Pain#7
+  - Bited_Pain#8
+  - Bited_Pain#9
+  - Bited_Pain#3
+  - Burned_Bited_Pain#8
+  - Burned_Bited_Pain#0
+  - Bited_Pain#1
+  - Face_10
+  - Face_2
+  - Face_11
+  - Burned_Pain#9
+  - Bited_Pain#10
+  - Pain#4
+  - Pain#9
+  - Pain#0
+  - Bited_Pain#6
+  - Burned_Bited_Pain#9
+  - Burned_Pain#2
+  - Pain#2
+  - Burned_Bited_Pain#5
+  - Face_9
+  m_RenderDataMap: {}
+  m_Tag: Pain
+  m_IsVariant: 0
