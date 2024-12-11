@@ -159,7 +159,6 @@ public class GameManager : Singleton<GameManager>
         foreach (Pain pain in liveList)
         {
             sm.Destroy_Pain(pain.level, pain);
-            yield return null;
         }
 
         yield return new WaitForSeconds(0.5f);
