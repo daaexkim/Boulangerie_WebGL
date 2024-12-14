@@ -77,7 +77,7 @@ public class Pain : MonoBehaviour, IPoolObject
         sr.sprite = defSprite;
         level = _level;
         wordData = data;
-        tmpro.text = wordData.word;
+        ResetTranslation();
         if (gm.gameMode == GameMode.Jeune)
             tmpro.color = sm.genderColors[(int)wordData.gender];
         isDropped = false;
@@ -127,17 +127,11 @@ public class Pain : MonoBehaviour, IPoolObject
 
             Pain other =  collision.gameObject.GetComponent<Pain>();
 
-            if(other.level == level && !isMerge && !other.isMerge)
+            if(other.level == level && !isMerge && !other.isMerge && level != 10)
             {
-                if(gm.gameMode == GameMode.Bebe)
-                {
-
-                }
-
-                else if (wordData.gender != Gender.Neutral && other.wordData.gender != Gender.Neutral && wordData.gender != other.wordData.gender)
-                {
-                    return;
-                }
+                if (gm.gameMode != GameMode.Bebe)
+                    if (wordData.gender != Gender.Neutral && other.wordData.gender != Gender.Neutral && wordData.gender != other.wordData.gender)
+                        return;
 
 
                 other.isMerge = true;

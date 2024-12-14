@@ -166,7 +166,7 @@ public class GameManager : Singleton<GameManager>
         um.gameoverPannel.SetUI(topScore, tarScore, tarCoin);
 
         bm.Stop();
-        bm.Tab(um.gameoverPannel.trans.gameObject);
+        bm.Tab_GameOver();
     }
 }
 

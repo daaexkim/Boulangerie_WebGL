@@ -9,7 +9,7 @@ public class TouchManager : Singleton<TouchManager>
 
     public void TouchDown()
     {
-        if (isTouching || GameManager.Instance.isGameover)
+        if (isTouching || GameManager.Instance.isGameover || BtnManager.Instance.isIteming)
             return;
 
         isTouching = true;
@@ -17,15 +17,20 @@ public class TouchManager : Singleton<TouchManager>
 
     public void TouchUp()
     {
-        if (!isTouching || GameManager.Instance.isGameover)
+        if (!isTouching || GameManager.Instance.isGameover || BtnManager.Instance.isIteming)
             return;
 
         isTouching = false;
 
+        StartCoroutine(DropRoutine());
+    }
+
+    private IEnumerator DropRoutine()
+    {
         SpawnManager sm = SpawnManager.Instance;
 
         if (sm.newPain == null)
-            return;
+            yield break;
 
         // SoundManager.Instance.SFXPlay(SFXType.Drop);
         sm.painList.Add(sm.newPain);
@@ -33,17 +38,20 @@ public class TouchManager : Singleton<TouchManager>
         sm.newPain.rigid.simulated = true;
         sm.newPain.SetFace(PainState.Fall);
         sm.newPain = null;
-        sm.curSpawnCool = 0f;
+
+        yield return new WaitForSeconds(sm.maxSpawnCool);
+
+        sm.newPain = sm.Spawn_Pain_Ran();
     }
 
     private void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0) && !isTouching && !EventSystem.current.IsPointerOverGameObject() && !GameManager.Instance.isGameover)
+        if (Input.GetMouseButtonDown(0) && !isTouching && !EventSystem.current.IsPointerOverGameObject() && !GameManager.Instance.isGameover && !BtnManager.Instance.isIteming)
         {
             TouchDown();
         }
-        else if (Input.GetMouseButtonUp(0) && isTouching && !GameManager.Instance.isGameover)
+        else if (Input.GetMouseButtonUp(0) && isTouching && !GameManager.Instance.isGameover && !BtnManager.Instance.isIteming)
         {
             TouchUp();
         }
@@ -56,11 +64,11 @@ public class TouchManager : Singleton<TouchManager>
             if (!IsTouchValid(touch.fingerId))
                 return;
 
-            if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(touch.fingerId) && !isTouching && !GameManager.Instance.isGameover)
+            if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(touch.fingerId) && !isTouching && !GameManager.Instance.isGameover && !BtnManager.Instance.isIteming)
             {
                 TouchDown();
             }
-            else if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled) && isTouching && !GameManager.Instance.isGameover)
+            else if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled) && isTouching && !GameManager.Instance.isGameover && !BtnManager.Instance.isIteming)
             {
                 TouchUp();
             }

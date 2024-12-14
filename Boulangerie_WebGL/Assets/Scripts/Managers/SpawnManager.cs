@@ -14,6 +14,11 @@ public class SpawnManager : Singleton<SpawnManager>
     public Color[] genderColors;
     public PainFace painFace;
 
+    private void Start()
+    {
+        newPain = Spawn_Pain_Ran();
+    }
+
     public void Update()
     {
         if (GameManager.Instance.isGameover)
@@ -22,9 +27,7 @@ public class SpawnManager : Singleton<SpawnManager>
         if (curSpawnCool < maxSpawnCool)
             curSpawnCool += Time.deltaTime;
 
-        if (!newPain && curSpawnCool >= maxSpawnCool)
-            newPain = Spawn_Pain_Ran();
-        else if(newPain && TouchManager.Instance.isTouching)
+        if(newPain && TouchManager.Instance.isTouching)
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
