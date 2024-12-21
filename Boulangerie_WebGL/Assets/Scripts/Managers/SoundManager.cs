@@ -9,15 +9,10 @@ public class SoundManager : Singleton<SoundManager>
 {
     public AudioSource bgmPlayer;
     public AudioSource[] sfxPlayer;
-    public BGMClip[] bGMClips;
+    public BGMClip[] bgmClips;
     public SFXClip[] sfxClips;
 
     private int sfxCursor;
-
-    private void Start()
-    {
-        BGMPlay(3);
-    }
 
     public void SFXPlay(SFXType type)
     {
@@ -30,15 +25,22 @@ public class SoundManager : Singleton<SoundManager>
         sfxPlayer[sfxCursor].Play();
         sfxCursor = (sfxCursor + 1) % sfxPlayer.Length;
     }
-    public void BGMPlay(int id)
-    {
-        bgmPlayer.clip = bGMClips[id].bgmClip;
-        bgmPlayer.volume = Mathf.Clamp01(bGMClips[id].volume);
-        bgmPlayer.Play();
-    }
+    //public void BGMPlay(int id)
+    //{
+    //    BGMClip clip = FindBGMClip(id);
+
+    //    bgmPlayer.clip = null;
+    //    bgmPlayer.clip = clip.bgmClip;
+    //    bgmPlayer.volume = Mathf.Clamp01(clip.volume);
+    //    bgmPlayer.Play();
+    //}
     private SFXClip FindSFXClip(SFXType type)
     {
         return Array.Find(sfxClips, clip => clip.type == type);
+    }
+    private BGMClip FindBGMClip(int id)
+    {
+        return Array.Find(bgmClips, clip => clip.id == id);
     }
 }
 
@@ -52,6 +54,7 @@ public struct SFXClip
 [Serializable]
 public struct BGMClip
 {
+    public int id;
     public float volume;
     public AudioClip bgmClip;
 }

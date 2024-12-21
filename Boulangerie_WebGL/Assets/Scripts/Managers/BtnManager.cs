@@ -61,23 +61,28 @@ public class BtnManager : Singleton<BtnManager>
             obj.transform.DOScale(new Vector3(0.05f, 0.05f, 0.05f), 0.25f).SetEase(Ease.InOutExpo).SetUpdate(true).OnComplete(() => obj.SetActive(false));
         }
     }
-
     public void Tab_GameOver()
     {
         GameObject obj = UIManager.Instance.gameoverPannel.trans.gameObject;
 
-        if (!obj.activeSelf)
-        {
-            obj.SetActive(true);
-            rayCastPannel.SetActive(true);
-            obj.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
-            obj.transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f).SetEase(Ease.InExpo).SetEase(Ease.OutBounce).SetUpdate(true);
-        }
-        else
-        {
-            rayCastPannel.SetActive(false);
-            obj.transform.DOScale(new Vector3(0.05f, 0.05f, 0.05f), 0.25f).SetEase(Ease.InOutExpo).SetUpdate(true).OnComplete(() => obj.SetActive(false));
-        }
+        obj.SetActive(true);
+        rayCastPannel.SetActive(true);
+        obj.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+        obj.transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f).SetEase(Ease.InExpo).SetEase(Ease.OutBounce).SetUpdate(true);
+    }
+
+    bool isStartTab;
+    public void TabToStartBtn()
+    {
+        if (isStartTab)
+            return;
+
+        isStartTab = true;
+        Screen.fullScreen = !Screen.fullScreen;
+        Application.targetFrameRate = 60;
+        // SoundManager.Instance.BGMPlay(3);
+
+        SceneManager.LoadScene(1);
     }
 
     public void Stop()
@@ -92,30 +97,27 @@ public class BtnManager : Singleton<BtnManager>
     public void Start_Game(int modeID)
     {
         GameManager.Instance.gameMode = (GameMode)modeID;
-        SoundManager.Instance.BGMPlay(modeID);
-        SceneManager.LoadScene(1);
+        // SoundManager.Instance.BGMPlay(modeID);
+        SceneManager.LoadScene(2);
     }
     public void Back_Menu()
     {
         GameManager.Instance.ReSet();
-        SoundManager.Instance.BGMPlay(3);
+        // SoundManager.Instance.BGMPlay(3);
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Restart_Game()
     {
         GameManager.Instance.ReSet();
-        SoundManager.Instance.bgmPlayer.Play();
+        // SoundManager.Instance.bgmPlayer.Play();
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void GameOverBtn(GameObject obj)
     {
         Tab(obj);
         GameManager.Instance.GameOver(null);
-    }
-    public void RankingBtn()
-    {
     }
 
     public void TranslateDown() {
